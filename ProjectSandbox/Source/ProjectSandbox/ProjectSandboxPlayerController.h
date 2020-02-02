@@ -13,13 +13,12 @@ UCLASS()
 class PROJECTSANDBOX_API AProjectSandboxPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
-public:
-	UFUNCTION(BlueprintImplementableEvent)
-	void NotifyTestFunc();
 
 protected:
 	virtual void BeginPlay() override;
+
+private:
+	void ShowWelcomeText();
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

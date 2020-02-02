@@ -2,10 +2,22 @@
 
 
 #include "ProjectSandboxPlayerController.h"
+#include "Blueprint/UserWidget.h"
 
 void AProjectSandboxPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	NotifyTestFunc();
+	ShowWelcomeText();
+}
+
+void AProjectSandboxPlayerController::ShowWelcomeText()
+{
+	UUserWidget* Widget = CreateWidget<UUserWidget>(this, WelcomeText);
+	if (Widget == nullptr)
+	{
+		return;
+	}
+
+	Widget->AddToViewport();
 }
