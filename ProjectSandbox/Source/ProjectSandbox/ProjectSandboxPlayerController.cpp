@@ -3,3 +3,9 @@
 
 #include "ProjectSandboxPlayerController.h"
 
+void AProjectSandboxPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+
+	NotifyTestFunc();
+}

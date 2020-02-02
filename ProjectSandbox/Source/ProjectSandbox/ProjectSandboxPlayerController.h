@@ -14,4 +14,14 @@ class PROJECTSANDBOX_API AProjectSandboxPlayerController : public APlayerControl
 {
 	GENERATED_BODY()
 	
+public:
+	UFUNCTION(BlueprintImplementableEvent)
+	void NotifyTestFunc();
+
+protected:
+	virtual void BeginPlay() override;
+
+protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSubclassOf<class UUserWidget> WelcomeText;
 };
