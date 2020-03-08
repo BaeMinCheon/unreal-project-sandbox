@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include <intrin.h>
 
 //////////////////////////////////////////////////////////////////////////
 // AProjectSandboxCharacter
@@ -18,8 +19,8 @@ AProjectSandboxCharacter::AProjectSandboxCharacter()
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
 	// set our turn rates for input
-	BaseTurnRate = 45.f;
-	BaseLookUpRate = 45.f;
+	BaseTurnRate = 60.f;
+	BaseLookUpRate = 60.f;
 
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
@@ -45,6 +46,11 @@ AProjectSandboxCharacter::AProjectSandboxCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+}
+
+AProjectSandboxCharacter::~AProjectSandboxCharacter()
+{
+	__debugbreak();
 }
 
 //////////////////////////////////////////////////////////////////////////
