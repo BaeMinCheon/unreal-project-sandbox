@@ -50,7 +50,7 @@ AProjectSandboxCharacter::AProjectSandboxCharacter()
 
 AProjectSandboxCharacter::~AProjectSandboxCharacter()
 {
-	__debugbreak();
+	//__debugbreak();
 }
 
 //////////////////////////////////////////////////////////////////////////
